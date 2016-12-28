@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'android-apt'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    defaultConfig {
+        applicationId "com.example.pfw.projectframework"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "armeabi"
+        }
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField('String', 'API_URL', '"http://115.159.153.191:9000/api/"')
+        }
+        release {
+            buildConfigField('String', 'API_URL', '"http://115.159.153.191:9000/api/"')
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    repositories {
+        flatDir {
+            dirs 'aars'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    testCompile 'junit:junit:4.12'
+    compile rootProject.ext.dependencies["appcompat-v7"]
+    compile rootProject.ext.dependencies["recyclerview"]
+    compile rootProject.ext.dependencies["butterknife"]
+    apt rootProject.ext.dependencies["butterknife-compiler"]
+    compile rootProject.ext.dependencies["fragmentation"]
+    compile rootProject.ext.dependencies["fragmentation-swipeback"]
+    compile rootProject.ext.dependencies["rxbinding"]
+    compile rootProject.ext.dependencies["easypermissions"]
+    compile rootProject.ext.dependencies["FlycoRoundView"]
+    compile rootProject.ext.dependencies["bga-titlebar"]
+    compile rootProject.ext.dependencies["switchbutton"]
+    compile rootProject.ext.dependencies["glide"]
+    compile rootProject.ext.dependencies["BasePopup"]
+    compile rootProject.ext.dependencies["cardView"]
+    compile rootProject.ext.dependencies["Luban"]
+    compile rootProject.ext.dependencies["kprogresshud"]
+    compile project(':api&model')
+}

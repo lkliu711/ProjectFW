@@ -1,0 +1,35 @@
+ext {
+    android = [
+            compileSdkVersion: 25,
+            buildToolsVersion: "25.0.1",
+            minSdkVersion    : 15,
+            targetSdkVersion : 25,
+            versionCode      : 1,
+            versionName      : "1.0"
+    ]
+
+    dependencies = [
+            "appcompat-v7"                 : "com.android.support:appcompat-v7:25.0.1",
+            "recyclerview"                 : "com.android.support:recyclerview-v7:24.1.1",
+            "butterknife"                  : "com.jakewharton:butterknife:8.2.1",
+            "butterknife-compiler"         : "com.jakewharton:butterknife-compiler:8.2.1",
+            "fragmentation"                : "me.yokeyword:fragmentation:0.7.9",
+            "fragmentation-swipeback"      : "me.yokeyword:fragmentation-swipeback:0.7.9",
+            "retrofit"                     : "com.squareup.retrofit2:retrofit:2.1.0",
+            "retrofit-rxjava"              : "com.squareup.retrofit2:adapter-rxjava:2.1.0",
+            "gson"                         : "com.google.code.gson:gson:2.7",
+            "logging-interceptor"          : "com.squareup.okhttp3:logging-interceptor:3.4.1",
+            "rxbinding"                    : "com.jakewharton.rxbinding:rxbinding:0.4.0",
+            "BaseRecyclerViewAdapterHelper": "com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.9.7",
+            "easypermissions"              : "pub.devrel:easypermissions:0.1.9",
+            "FlycoRoundView"               : "com.flyco.roundview:FlycoRoundView_Lib:1.1.4@aar",
+            "bga-titlebar"                 : "cn.bingoogolapple:bga-titlebar:1.0.1@aar",
+            "switchbutton"                 : "com.kyleduo.switchbutton:library:1.4.4",
+            "glide"                        : "com.github.bumptech.glide:glide:3.7.0",
+            "BasePopup"                    : "com.github.razerdp:BasePopup:v1.1.7",
+            "converter-gson"               : "com.squareup.retrofit2:converter-gson:2.1.0",
+            "cardView"                     : "com.android.support:cardview-v7:24.1.1",
+            "Luban"                        : "top.zibin:Luban:1.0.8",
+            "kprogresshud"                 : "com.kaopiz:kprogresshud:1.0.5"
+    ]
+}
