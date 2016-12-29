@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.kaopiz.kprogresshud.KProgressHUD;
 
 /**
- * Created by baixiaokang on 16/4/22.
+ *
  */
 public abstract class BasePresenter<E, T> {
     public Context context;

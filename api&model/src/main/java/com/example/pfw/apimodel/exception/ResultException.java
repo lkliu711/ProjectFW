@@ -1,7 +1,6 @@
 package com.example.pfw.apimodel.exception;
 
 /**
- * Created by wangfangqi on 16/8/26.
  * 错误消息体
  */
 public class ResultException {

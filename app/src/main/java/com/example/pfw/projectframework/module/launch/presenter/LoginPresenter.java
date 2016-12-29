@@ -30,21 +30,8 @@ public class LoginPresenter extends LoginContract.Presenter {
             @Override
             public void onNext(LoginInfo loginInfo) {
                 mView.loginSuccess();
-                SPUtil.put(context, Constant.MOBILE, mobile);
-                saveUserInfo(loginInfo);
                 loadDismiss();
             }
         }));
-    }
-
-    private void saveUserInfo(LoginInfo loginInfo) {
-        App.getContext().setLoginInfo(loginInfo);
-        SPUtil.put(context, Constant.LOGIN, true);
-        SPUtil.put(context, Constant.LOGIN_INFO, new Gson().toJson(loginInfo));
-        List<String> permitList = new ArrayList<>();
-//        for (PermitMenu permitMenu : loginInfo.getMenus()) {
-//            permitList.add(permitMenu.code);
-//        }
-        App.getContext().setPermitList(permitList);
     }
 }

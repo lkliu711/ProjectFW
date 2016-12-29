@@ -9,8 +9,6 @@ import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.widget.Toast;
 
-import com.example.pfw.projectframework.R;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -45,56 +43,56 @@ public class CapturePhotoHelper {
         this.mPhotoFolder = photoFolder;
     }
 
-//    /**
-//     * 拍照
-//     */
-//    public void capture(Object o) {
-//        if (hasCamera()) {
-//            createPhotoFile();
-//
-//            if (mPhotoFile == null) {
-//                Toast.makeText(mActivity, R.string.camera_open_error, Toast.LENGTH_SHORT).show();
-//                return;
-//            }
-//
-//            Intent captureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//            Uri fileUri = Uri.fromFile(mPhotoFile);
-//            captureIntent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
-//            if (o instanceof Activity) {
-//                ((Activity) o).startActivityForResult(captureIntent, CAPTURE_PHOTO_REQUEST_CODE);
-//            } else if (o instanceof Fragment) {
-//                ((Fragment) o).startActivityForResult(captureIntent, CAPTURE_PHOTO_REQUEST_CODE);
-//            }
-//        } else {
-//            Toast.makeText(mActivity, R.string.camera_open_error, Toast.LENGTH_SHORT).show();
-//        }
-//    }
+    /**
+     * 拍照
+     */
+    public void capture(Object o) {
+        if (hasCamera()) {
+            createPhotoFile();
 
-//    /**
-//     * 创建照片文件
-//     */
-//    private void createPhotoFile() {
-//        if (mPhotoFolder != null) {
-//            if (!mPhotoFolder.exists()) {//检查保存图片的目录存不存在
-//                mPhotoFolder.mkdirs();
-//            }
-//
-//            String fileName = new SimpleDateFormat(TIMESTAMP_FORMAT).format(new Date());
-//            mPhotoFile = new File(mPhotoFolder, fileName + ".jpg");
-//            if (mPhotoFile.exists()) {
-//                mPhotoFile.delete();
-//            }
-//            try {
-//                mPhotoFile.createNewFile();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//                mPhotoFile = null;
-//            }
-//        } else {
-//            mPhotoFile = null;
-//            Toast.makeText(mActivity, R.string.not_specify_a_directory, Toast.LENGTH_SHORT).show();
-//        }
-//    }
+            if (mPhotoFile == null) {
+                Toast.makeText(mActivity, "打开相册出错", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            Intent captureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            Uri fileUri = Uri.fromFile(mPhotoFile);
+            captureIntent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
+            if (o instanceof Activity) {
+                ((Activity) o).startActivityForResult(captureIntent, CAPTURE_PHOTO_REQUEST_CODE);
+            } else if (o instanceof Fragment) {
+                ((Fragment) o).startActivityForResult(captureIntent, CAPTURE_PHOTO_REQUEST_CODE);
+            }
+        } else {
+            Toast.makeText(mActivity, "打开相册出错", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    /**
+     * 创建照片文件
+     */
+    private void createPhotoFile() {
+        if (mPhotoFolder != null) {
+            if (!mPhotoFolder.exists()) {//检查保存图片的目录存不存在
+                mPhotoFolder.mkdirs();
+            }
+
+            String fileName = new SimpleDateFormat(TIMESTAMP_FORMAT).format(new Date());
+            mPhotoFile = new File(mPhotoFolder, fileName + ".jpg");
+            if (mPhotoFile.exists()) {
+                mPhotoFile.delete();
+            }
+            try {
+                mPhotoFile.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+                mPhotoFile = null;
+            }
+        } else {
+            mPhotoFile = null;
+            Toast.makeText(mActivity, "没有内存卡", Toast.LENGTH_SHORT).show();
+        }
+    }
 
 
     /**

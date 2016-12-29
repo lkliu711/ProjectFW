@@ -8,7 +8,6 @@ import java.lang.reflect.Method;
 import java.util.Map;
 
 /**
- * Created by wangfangqi on 16/8/20.
  * SharedPreferences帮助类
  */
 public class SPUtil {

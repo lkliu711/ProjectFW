@@ -18,7 +18,6 @@ import okhttp3.RequestBody;
 
 
 /**
- * Created by wangfangqi on 16/7/21.
  */
 public class Utils {
 

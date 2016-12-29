@@ -38,11 +38,6 @@ public abstract class BaseActivity<T extends BasePresenter, E extends BaseModel>
         ActivityCollector.addActivity(this);
     }
 
-    //    @Override
-//    protected void attachBaseContext(Context newBase) {
-//        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
-//    }
-
     @Override
     protected void onDestroy() {
         super.onDestroy();

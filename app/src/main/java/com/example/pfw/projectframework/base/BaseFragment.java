@@ -14,7 +14,6 @@ import butterknife.Unbinder;
 import me.yokeyword.fragmentation_swipeback.SwipeBackFragment;
 
 /**
- * Created by wangfangqi on 16/6/24.
  * Fragment基类
  */
 public abstract class BaseFragment<T extends BasePresenter, E extends BaseModel> extends SwipeBackFragment {

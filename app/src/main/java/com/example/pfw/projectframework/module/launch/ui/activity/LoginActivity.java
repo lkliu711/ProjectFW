@@ -1,43 +1,18 @@
 package com.example.pfw.projectframework.module.launch.ui.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextUtils;
-import android.text.TextWatcher;
-import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.LinearLayout;
-
 
 import com.example.pfw.projectframework.R;
 import com.example.pfw.projectframework.base.BaseActivity;
-import com.example.pfw.projectframework.config.Constant;
 import com.example.pfw.projectframework.module.launch.contract.LoginContract;
 import com.example.pfw.projectframework.module.launch.model.LoginModel;
 import com.example.pfw.projectframework.module.launch.presenter.LoginPresenter;
-import com.example.pfw.projectframework.utils.SPUtil;
 import com.example.pfw.projectframework.utils.StateBarTranslucentUtils;
 
-import butterknife.BindView;
-import butterknife.OnClick;
-
 /**
- * Created by wangfangqi on 16/8/20.
  * 登录
  */
 public class LoginActivity extends BaseActivity<LoginPresenter, LoginModel> implements LoginContract.View {
-//    @BindView(R.id.ll)
-//    LinearLayout linearLayout;
-//    @BindView(R.id.et_account)
-//    ClearEditText etAccount;
-//    @BindView(R.id.et_pass_word)
-//    ClearEditText etPassWord;
-//    @BindView(R.id.checkbox)
-//    CheckBox checkBox;
-//    @BindView(R.id.btn_login)
-//    Button btnLogin;
 
     @Override
     protected void setStatusColor() {
@@ -52,25 +27,16 @@ public class LoginActivity extends BaseActivity<LoginPresenter, LoginModel> impl
 
     @Override
     public void onSavedState(Bundle savedInstanceState) {
-        boolean isLogin = (boolean) SPUtil.get(this, Constant.LOGIN, false);
-        if (isLogin) {
-//            startActivity(new Intent(this, MainActivity.class));
-            finish();
-        }
+//        boolean isLogin = (boolean) SPUtil.get(this, Constant.LOGIN, false);
+//        if (isLogin) {
+////            startActivity(new Intent(this, MainActivity.class));
+//            finish();
+//        }
     }
 
     @Override
     public void initView() {
-//        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) linearLayout.getLayoutParams();
-//        params.height = DensityUtil.getScreenHight(this) / 2;
-//        linearLayout.setLayoutParams(params);
-//        //设置文本长度监听
-//        etAccount.addTextChangedListener(new TextChange());
-//        etPassWord.addTextChangedListener(new TextChange());
-//        checkBox.setOnCheckedChangeListener(new PasswordShowHide(etPassWord));
-//        String mobile = (String) SPUtil.get(this, Constant.MOBILE, "");
-//        etAccount.setText(mobile);
-//        etAccount.setSelection(TextUtils.isEmpty(mobile) ? 0 : mobile.length());
+
     }
 
     @Override

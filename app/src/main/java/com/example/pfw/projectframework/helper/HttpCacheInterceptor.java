@@ -15,7 +15,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 /**
- * Created by wangfangqi on 16/7/15.
+ *
  */
 public class HttpCacheInterceptor implements Interceptor {
 

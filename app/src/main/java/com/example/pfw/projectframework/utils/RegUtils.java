@@ -1,7 +1,6 @@
 package com.example.pfw.projectframework.utils;
 
 /**
- * Created by wangfangqi on 16/7/22.
  * 数据校验
  */
 public class RegUtils {

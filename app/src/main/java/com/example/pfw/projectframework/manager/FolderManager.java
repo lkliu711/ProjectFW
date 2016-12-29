@@ -5,14 +5,14 @@ import android.os.Environment;
 import java.io.File;
 
 /**
- * Created by wangfangqi on 16/8/13.
+ *
  */
 public class FolderManager {
 
     /**
      * 应用程序在SD卡上的主目录名称
      */
-    private final static String APP_FOLDER_NAME = "WeiXinPipe";
+    private final static String APP_FOLDER_NAME = "Ob_FW";
     /**
      * 存放图片目录名
      */

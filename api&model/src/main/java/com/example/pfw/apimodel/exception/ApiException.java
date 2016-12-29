@@ -1,7 +1,6 @@
 package com.example.pfw.apimodel.exception;
 
 /**
- * Created by zhangxiangyu on 16/5/9.
  * <p>
  * 自定义ApiException，携带了异常代码和信息，以及根源Throwable
  */

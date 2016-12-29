@@ -1,13 +1,13 @@
 package com.example.pfw.apimodel.api;
 
 
-import android.database.Observable;
 
 import com.example.pfw.apimodel.entity.LoginInfo;
 
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
+import rx.Observable;
 
 /**
  * Created by wangfangqi on 16/8/25.

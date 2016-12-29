@@ -5,7 +5,6 @@ import android.content.Context;
 import android.util.DisplayMetrics;
 
 /**
- * Created by wangfangqi on 16/6/29.
  * 尺寸换算工具
  */
 public class DensityUtil {

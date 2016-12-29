@@ -1,7 +1,6 @@
 package com.example.pfw.apimodel.utils;
 
 /**
- * Created by wangfangqi on 16/7/14.
  * 请求错误描述帮助类
  */
 public class ConverterUtil {

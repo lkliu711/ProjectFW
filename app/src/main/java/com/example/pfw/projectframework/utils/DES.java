@@ -4,7 +4,6 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * Created by wangfangqi on 16/3/26.
  */
 public class DES {
 

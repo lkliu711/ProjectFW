@@ -19,7 +19,7 @@ import rx.subjects.Subject;
 /**
  * 用RxJava实现的EventBus
  *
- * @author baixiaokang
+ * @author
  */
 public class RxBus {
     private static RxBus instance;

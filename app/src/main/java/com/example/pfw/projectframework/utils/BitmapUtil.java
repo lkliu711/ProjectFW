@@ -19,7 +19,7 @@ import com.example.pfw.projectframework.manager.FolderManager;
 import rx.Observable;
 
 /**
- * Created by wangfangqi on 16/8/13.
+ *
  */
 public class BitmapUtil {
 

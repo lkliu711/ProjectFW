@@ -1,6 +1,5 @@
 package com.example.pfw.projectframework.module.launch.model;
 
-
 import com.example.pfw.apimodel.api.UserApi;
 import com.example.pfw.apimodel.entity.LoginInfo;
 import com.example.pfw.projectframework.module.launch.contract.LoginContract;
@@ -15,11 +14,7 @@ import rx.Observable;
 public class LoginModel implements LoginContract.Model {
     @Override
     public Observable<LoginInfo> login(String mobile, String password) {
-        return null;
+        return RetrofitUtil.createApi(UserApi.class).login(mobile, password)
+                .compose(RxSchedulers.io_main());
     }
-//    @Override
-//    public Observable<LoginInfo> login(String mobile, String password) {
-//        return RetrofitUtil.createApi(UserApi.class).login(mobile, password)
-//                .compose(RxSchedulers.io_main());
-//    }
 }
